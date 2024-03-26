@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>ATTENTION</h1>
+    <p>Vous et X nombre de personne ce sont fait avoir par ce lien malvaillant</p>
+    <p>Avez vous vue l'URL ?</p>
+
+</body>
+
+<script>
+    $.getJSON("https://api.countapi.xyz/hit/mysite.com/visits", function (response) {
+        $("#visits").text(response.value);
+    });
+</script>
+
+</html>
